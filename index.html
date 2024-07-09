@@ -20,16 +20,26 @@
         <div id="tswcontproper">
           <!-- start of content column: insert your content here -->
           <h1>Home</h1>
-          <button type="button" onclick="testButton()">button1</button>
-              <p id="demo"></p>
-          <p>&nbsp;</p>
+           <button type="button" onclick="testButton()">button1</button> 
+          <button type="button" onclick="buttonOn()">button2</button>
+          <p id="demo"></p>
+          <p id="text"></p>
+          <ul id="myList"></ul>
           <script>
+				let data = [0, 1];
+        let list = document.getElementById("myList");
             var counter = 0;
+            var isOn = 0;
             function testButton(){
-              counter += 1;
-                document.getElementById('demo').innerHTML = counter;
-              }
-
+						counter += 1;
+            data[counter+1] = data[counter] + data[counter-1];
+						let li = document.createElement('li');
+            li.innerText = data[counter-1];
+            list.appendChild(li);
+            }
+            function buttonOn(){
+            if (isOn == 0){document.getElementById('demo').innerHTML = ""; isOn = 1;}
+            else {document.getElementById('demo').innerHTML = "test"; isOn = 0;}
             }
           </script>
           <!-- end of content column: put your content above this line --> </div>
@@ -54,5 +64,6 @@
         <!-- end of footer section: insert your copyright notice, etc, above this line -->
       </div>
     </div>
+    
   </body>
 </html>
