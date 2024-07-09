@@ -20,8 +20,18 @@
         <div id="tswcontproper">
           <!-- start of content column: insert your content here -->
           <h1>Home</h1>
-          <p> </p>
+          <button type="button" onclick="testButton()">button1</button>
+              <p id="demo"></p>
           <p>&nbsp;</p>
+          <script>
+            var counter = 0;
+            function testButton(){
+              counter += 1;
+                document.getElementById('demo').innerHTML = counter;
+              }
+
+            }
+          </script>
           <!-- end of content column: put your content above this line --> </div>
       </div>
       <div id="tswsidecol">
