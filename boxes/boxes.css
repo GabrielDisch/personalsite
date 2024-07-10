@@ -1,0 +1,36 @@
+body{
+background-color: darkorange;
+}
+#mybox{
+    position: relative;
+width: 100%;
+height: 100px;
+background-color:rgb(56, 36, 94);
+outline: 5px solid rgb(148, 10, 175);
+border: 3px solid darkblue ;
+padding: 5px 5px 5px 5px ;
+margin: 5px 5px 5px 5px;
+}
+#thing{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: aliceblue;
+    right: 50%;
+    height: 50%;
+    animation-name: dance;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+}
+    @keyframes dance {
+        0%,100%{
+            background-color: purple;
+            right: 0%;
+            top: 100%;
+        }
+        50%{
+            background-color: aqua;
+            right: 100%;
+            top: 0%;
+        }
+    }
