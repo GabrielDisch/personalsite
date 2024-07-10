@@ -7,17 +7,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first JS Project</title>
+    <title>First JS Project</title>
     <link rel="stylesheet" href="./intro.css">
 </head>
 <body>
-    <label>BK color</label>
-    <input id="colorID">
-    <h1> First project!!</h1>
+    <h1>Welcome to my JS Project!</h1>
+    <h3>~~ Very interactive ~~</h3>
+
+    <label>Background color: </label>
+    <input id="color-field" value="beige">
     <br>
-    <button id="button1" onclick="buttonPress()">Lots of clicking</button>
-    <p id="text">whaddup</p>
-    <script src="./intro.js"></script>
-    <input type="checkbox" id = "checkbox" onchange="checkBoxPress"><label>Border</label>
+    <label>Font size: </label>
+    <input type="number" id="font-size-field">
+    <br>
+    <button id="click-button" onclick="buttonPress()">CLICK ME!</button>
+    <p id="text">Hello there!</p>
+
+    <input type="checkbox" id="checkbox" onchange="checkboxChange()">
+    <label>Border</label>
+
+    <script src="./intro.js">
+        // could write code in here
+    </script>
 </body>
 </html>

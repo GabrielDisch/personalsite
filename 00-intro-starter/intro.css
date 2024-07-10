@@ -6,7 +6,8 @@
    3. elementtype (all elements of one type)
    4. * (all elements)
  */
-body{
-  background-color: purple;
-  border: 10px hidden darkgreen;
+
+body {
+  background-color: beige;
+  outline: 5px hidden darkgrey;
 }
