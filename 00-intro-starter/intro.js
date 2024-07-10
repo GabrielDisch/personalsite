@@ -29,4 +29,15 @@ function checkboxChange() {
     } else {
         body.style.outlineStyle = "none";
     }
+
 }
+let data = [0, 1];
+let list = document.getElementById("myList");
+var counter = 0;
+function testButton() {
+    counter += 1;
+    data[counter + 1] = data[counter] + data[counter - 1];
+    let li = document.createElement('li');
+    li.innerText = data[counter - 1];
+    list.appendChild(li);
+  }
