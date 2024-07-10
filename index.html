@@ -25,14 +25,17 @@
         <h1>Home</h1>
         <button type="button" onclick="testButton()">button1</button>
         <button type="button" onclick="buttonOn()">button2</button>
+        <button type="button" onclick="buttonMoment()">Random Number</button>
         <p id="demo"></p>
         <p id="text"></p>
+        <p id="text2"></p>
         <ul id="myList"></ul>
         <script>
           let data = [0, 1];
           let list = document.getElementById("myList");
           var counter = 0;
-          var isOn = 0;
+          var isOn = 1;
+          var isOn1 = 1;
           function testButton() {
             counter += 1;
             data[counter + 1] = data[counter] + data[counter - 1];
@@ -43,6 +46,9 @@
           function buttonOn() {
             if (isOn == 0) { document.getElementById('demo').innerHTML = ""; isOn = 1; }
             else { document.getElementById('demo').innerHTML = "test"; isOn = 0; }
+          }
+          function buttonMoment(){
+            document.getElementById('text2').innerHTML = Math.round(Math.random() * 100);
           }
         </script>
         <!-- end of content column: put your content above this line -->
