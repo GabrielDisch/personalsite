@@ -77,21 +77,23 @@ function changeGuess() {
         guessField.value = "";
         return;
     }
-    
-    let correctPlacement = 0;
-    for (let i = 0; i < 5; i++) {
-        if (guess[i] == secret[i]) {
-            correctPlacement++;
-        }
-    }
-    for (let i = 0; i < 5; i++)
-    {
-        for (let i = 0; i < 5; i ++){
-
-        }
-
-    }
-    feedbackText.innerHTML += `"${guess}" has ${correctPlacement} letter(s) in the correct place.<br>`;
-    guessField.value = "";
-    
+    feedbackText.innerHTML += "<br>"
+    for(let x = 0; x < 5; x++){
+    feedbackText.innerHTML += `${guess[x] + checkLetter(x)}`;
+    }   
+guessField.value = "";
 }
+function checkLetter(i){
+    let guess = guessField.value.toLowerCase();
+        for (let j = 0; j < 5; j ++){
+            if (guess[i] == secret[i])
+            return "📗 "
+            else if (guess[i] == secret[j] && i == j)
+            return "📗 ";
+            else if (guess[i] == secret[j])
+            return "📒 ";
+        }
+    return "📕 ";
+}
+
+    
